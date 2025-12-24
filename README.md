@@ -29,7 +29,12 @@ Multimodal industrial anomaly detection benefits from combining complementary RG
 ...
 
 ## Datasets
-...
+
+We evaluate CMDR-IAD on the **[MVTec 3D-AD](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad)** dataset, which provides paired RGB images and 3D point clouds for industrial anomaly detection.
+
+The raw dataset requires preprocessing to obtain aligned RGB images and organized point clouds. The necessary preprocessing scripts are provided in the `processing` directory.
+
+
 
 ## Checkpoints
 ...
