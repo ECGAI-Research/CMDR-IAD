@@ -18,23 +18,29 @@ Multimodal industrial anomaly detection benefits from combining complementary RG
 
 ---
 
-## 🧠 Method
+## 📑 Table of Contents
+- [Introduction](#introduction)
+- [Datasets](#datasets)
+- [Checkpoints](#checkpoints)
+- [Code](#code)
+- [Contacts](#contacts)
 
-CMDR-IAD consists of four main components:
+## Introduction
+...
 
-1. **Multimodal Feature Extractors**  
-   Frozen pretrained 2D and 3D encoders extract appearance and geometric feature maps.
+## Datasets
+...
 
-2. **Cross-Modal Mapping Networks**  
-   Lightweight MLPs learn bidirectional mappings between 2D and 3D feature spaces.
+## Checkpoints
+...
 
-3. **Dual-Branch Reconstruction Modules**  
-   Independent 2D and 3D decoders reconstruct modality-specific features to model normal patterns.
+## Code
+...
 
-4. **Reliability-Aware Fusion**  
-   - A *reliability-gated mapping anomaly* highlights spatially consistent appearance–geometry discrepancies.  
-   - A *confidence-weighted reconstruction anomaly* adaptively balances appearance and geometric deviations.  
-   Their integration yields stable anomaly localization even in depth-sparse or low-texture regions.
+## Contacts
+...
+
+
 
 ---
 
