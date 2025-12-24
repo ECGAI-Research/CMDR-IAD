@@ -36,11 +36,32 @@ The raw dataset requires preprocessing to obtain aligned RGB images and organize
 
 
 
-## Checkpoints
-...
+## 📦 checkpoints
+
+We release the pretrained CMDR-IAD checkpoints used to obtain the results reported in the paper.
+The weights are provided per object category and can be directly used for inference.
+
+- Download: [CMDR-IAD checkpoints – link to be added]
 
 ## Code
-...
+To train CMDR-IAD, use the train.py script.
+The training procedure independently optimizes the cross-modal mapping networks and the dual-branch reconstruction modules for a given object category, following the protocol described in the paper.
+Training command
+python train.py --class_name tire
+
+Training options
+
+--dataset_path : Path to the root directory of the MVTec 3D-AD dataset.
+
+--checkpoint_savepath : Directory where trained checkpoints will be saved (default: ./checkpoints/CMDR_IAD_checkpoints).
+
+--class_name : Object category to train on.
+
+--epochs_no : Number of training epochs.
+
+--batch_size : Batch size.
+
+Each object category is trained independently, and the resulting checkpoints are stored per class.
 
 ## Contacts
 ...
