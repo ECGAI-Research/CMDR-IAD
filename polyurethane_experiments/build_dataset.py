@@ -13,11 +13,7 @@ from sklearn.ensemble import IsolationForest
 # ------------------------------------------------------------
 # CONFIGURABLE LOF SETTINGS
 # ------------------------------------------------------------
-'''LOF_SETTINGS = {
-    "balanced":  {"n_neighbors": 30, "contamination": 0.0005},
-    "base": {"n_neighbors": 30, "contamination": 0.00025},
-    "low": {"n_neighbors": 30, "contamination": 0.0001},
-    "high": {"n_neighbors": 30, "contamination": 0.00015}  }   # 0.1%}'''
+
 
 DETECTOR_SETTINGS = {
     "low":       {"contamination": 0.0001},
@@ -79,7 +75,7 @@ def chunk_sequential(points, abn_mask, sample_size):
 # ------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--root", type=str, default="./ACQUISIZIONI/")
+    parser.add_argument("--root", type=str, default="/home/radia123_/decomap/poly/ACQUISIZIONI/")
     parser.add_argument("--sampling", type=str, required=True,
                         choices=["sequential"])
     parser.add_argument("--detector", type=str,
