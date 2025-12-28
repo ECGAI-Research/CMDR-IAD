@@ -93,7 +93,7 @@ def train_featrec3d(args, save_model=True):
             loss.backward()
             optimizer.step()
 
-        print(f"Epoch {epoch+1}/{args.epochs_no} → Avg CosSim = {np.mean(epoch_sim):.4f}")
+        print(f"Epoch {epoch+1}/{args.epochs_no} → Avg CosSim = {1-np.mean(epoch_sim):.4f}")
 
     # ------------------------------
     # Save checkpoint
@@ -135,3 +135,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     train_featrec3d(args, save_model=True)
+
