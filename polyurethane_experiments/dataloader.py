@@ -85,4 +85,3 @@ class TestSet(Dataset):
             mask = np.zeros(pc.shape[0], dtype=np.uint8)
 
         return pc_img, label, torch.tensor(mask, dtype=torch.uint8)
-
