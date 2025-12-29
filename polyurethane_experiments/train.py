@@ -69,7 +69,6 @@ def train_featrec3d(args, save_model=True):
             model.train()
 
             # Feature extraction
-            # Feature extraction
             if args.batch_size == 1:
                 xyz_patch = feature_extractor.get_features_maps(pc)
             else:
@@ -83,7 +82,7 @@ def train_featrec3d(args, save_model=True):
 
             xyz_mask = (xyz_patch.sum(dim=-1) == 0)
             loss = 1 - metric(feat_pred[~xyz_mask], xyz_patch[~xyz_mask]).mean()
-            epoch_sim.append(1 - loss.item())
+            epoch_sim.append( loss.item())
 
             if torch.isnan(loss) or torch.isinf(loss):
                 print("❌ NaN or Inf detected — training stopped.")
@@ -93,7 +92,7 @@ def train_featrec3d(args, save_model=True):
             loss.backward()
             optimizer.step()
 
-        print(f"Epoch {epoch+1}/{args.epochs_no} → Avg CosSim = {1-np.mean(epoch_sim):.4f}")
+        print(f"Epoch {epoch+1}/{args.epochs_no} → Avg CosSim = {np.mean(epoch_sim):.4f}")
 
     # ------------------------------
     # Save checkpoint
