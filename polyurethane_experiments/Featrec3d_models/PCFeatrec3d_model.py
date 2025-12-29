@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import timm
 from timm.models.layers import DropPath
 
 from utils import pointnet2_utils
