@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 import os
 import json
 import numpy as np
 import open3d as o3d
 import argparse
 from sklearn.neighbors import LocalOutlierFactor
-from sklearn.cluster import KMeans
 from sklearn.ensemble import IsolationForest
 
 
