@@ -1,7 +1,6 @@
 import torch
 import numpy as np
-from sklearn.metrics import roc_auc_score
-from utils.metrics_utils import calculate_au_pro
+
 
 from utils.pointnet2_utils import interpolating_points
 from Featrec3d_models.PCFeatrec3d_model import FeatureExtractors
@@ -39,19 +38,6 @@ class PointCloudFeatures(torch.nn.Module):
 
         # Return only the 3D feature maps
         return xyz_feature_maps, center, ori_idx, center_idx, interpolated_feature_maps
-
-    def calculate_metrics(self):
-        self.image_preds = np.stack(self.image_preds)
-        self.image_labels = np.stack(self.image_labels)
-        self.pixel_preds = np.array(self.pixel_preds)
-
-        print(f"Image Predictions shape: {self.image_preds.shape}")
-        print(f"Image Labels shape: {self.image_labels.shape}")
-        print(f"Pixel Predictions shape: {self.pixel_preds.shape}")
-
-        self.image_rocauc = roc_auc_score(self.image_labels, self.image_preds)
-        self.pixel_rocauc = roc_auc_score(self.pixel_labels, self.pixel_preds)
-        self.au_pro, _ = calculate_au_pro(self.gts, self.predictions)
 
     def get_features_maps(self, pc):
 
