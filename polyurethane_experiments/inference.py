@@ -1,16 +1,12 @@
-import os
 import torch
 import numpy as np
 from tqdm import tqdm
-import matplotlib.pyplot as plt
 from sklearn.metrics import roc_auc_score
 from utils.metrics_utils import calculate_au_pro
 
 from dataloader import TestSet
 from Featrec3d_models.PCFeatureEncoder_9216 import PointCloudFeatures
 from Featrec3d_models.PCFeaturDecoder import  FeatureDecoder_9216
-
-import time
 
 
 # -------------------- Helper Functions --------------------
@@ -32,7 +28,7 @@ def test_featrec3d(args):
     test_loader = torch.utils.data.DataLoader(
         test_dataset, batch_size=1, shuffle=False, num_workers=2
     )
-
+   
 
     # Load model + feature extractor
     feature_extractor = PointCloudFeatures()
@@ -55,8 +51,7 @@ def test_featrec3d(args):
 
     print("\n🚀 Running inference...")
     for pc_img, label, gt_mask in tqdm(test_loader, desc="Testing"):
-        torch.cuda.synchronize()
-        start_time = time.time()
+
         pc_img = pc_img.to(device)
         gt_mask = gt_mask.squeeze(0).numpy()
 
@@ -85,6 +80,7 @@ def test_featrec3d(args):
             norm = torch.sqrt(cos_map[cos_map != 0].mean())
             norm_map = cos_map / (norm + 1e-6)
 
+
         # Flatten for metrics
         pred_flat = norm_map.cpu().numpy().flatten()
         gt_flat = gt_mask.flatten()
@@ -95,7 +91,6 @@ def test_featrec3d(args):
         image_scores.append(pred_flat.max())
         pixel_labels.extend(gt_flat)
         pixel_scores.extend(pred_flat)
-
 
 
 
@@ -121,8 +116,6 @@ def test_featrec3d(args):
     print("AUPRO@30% | AUPRO@10% | AUPRO@5% | AUPRO@1% | P-AUROC | I-AUROC")
     print(f"  {au_pros[0]:.3f}   |   {au_pros[1]:.3f}   |   {au_pros[2]:.3f}  |   {au_pros[3]:.3f}  |   {pixel_auc:.3f} |   {image_auc:.3f}")
     
-
-
 # -------------------- Main --------------------
 if __name__ == "__main__":
     import argparse
@@ -134,5 +127,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     test_featrec3d(args)
-
 
