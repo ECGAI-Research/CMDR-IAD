@@ -257,7 +257,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--checkpoint_folder",
         type=str,
-        default="/home/radia123_/decomap/checkpoints/mm_Dec_Map",
+        default="./checkpoints/CMDR_IAD_checkpoints",
         help="Folder containing trained checkpoints."
     )
 
