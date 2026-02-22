@@ -64,15 +64,15 @@ python train.py --class_name tire
 
 Training options
 
---dataset_path : Path to the root directory of the MVTec 3D-AD dataset.
+`--dataset_path` : Path to the root directory of the MVTec 3D-AD dataset.
 
---checkpoint_savepath : Directory where trained checkpoints will be saved (default: ./checkpoints/CMDR_IAD_checkpoints).
+`--checkpoint_savepath` : Directory where trained checkpoints will be saved (default: ./checkpoints/CMDR_IAD_checkpoints).
 
---class_name : Object category to train on.
+`--class_name` : Object category to train on.
 
---epochs_no : Number of training epochs.
+`--epochs_no` : Number of training epochs.
 
---batch_size : Batch size.
+`--batch_size` : Batch size.
 
 Each object category is trained independently, and the resulting checkpoints are stored per class.
 
