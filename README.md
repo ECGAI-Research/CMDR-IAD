@@ -55,8 +55,8 @@ We release the pretrained CMDR-IAD checkpoints used to obtain the results report
 The weights are provided per object category and can be directly used for inference.
 
 - Download: **[CMDR-IAD checkpoints](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad)**
-- Create a folder named checkpoints in the project directory;
-- Copy the downloaded weights into the checkpoints.
+- Create a folder named `checkpoints` in the project directory;
+- Copy the downloaded weights into the `checkpoints`.
 
 ## Code
 To train CMDR-IAD, use the train.py script.
