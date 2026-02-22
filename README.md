@@ -92,7 +92,9 @@ CMDR-IAD/
 │   ├── Dec3d.py
 │   ├── dataset.py
 │   └── full_models.py
-│
+├── processing/
+│   ├── aggregate_results.py
+│   ├── preprocess_mvtec.py
 ├── utils/
 │   ├── mvtec3d_utils.py
 │   ├── pointnet2_utils.py
@@ -103,5 +105,3 @@ CMDR-IAD/
 ├── inference.py
 ├── README.md
 ├── requirements.txt
-├── .gitignore
-└── LICENSE
