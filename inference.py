@@ -80,7 +80,7 @@ def confidence_weighted_reconstruction_anomaly(d_rec2d, d_rec3d, B=0.3):
     return confidence_weighted_reconstruction_anomaly
 
 # --------------------------------------------------
-def infer_CFM_full(args):
+def CMDR-IAD_inference(args):
     set_seeds()
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -287,4 +287,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    infer_CFM_full(args)
+    CMDR-IAD_inference(args)
