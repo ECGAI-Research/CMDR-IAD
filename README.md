@@ -40,6 +40,12 @@ Key Features:
 
 - 3D-only mode: the 3D reconstruction branch works independently if only point clouds are available.
 
+<p align="center">
+  <img src="images/architecture.png" width="800">
+</p>
+
+**Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
+
 
 ## Datasets
 
