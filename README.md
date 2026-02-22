@@ -26,7 +26,29 @@ Multimodal industrial anomaly detection benefits from combining complementary RG
 - [Contacts](#contacts)
 
 ## Introduction
-...
+CMDR-IAD: 2D–3D Industrial Anomaly Detection
+
+CMDR-IAD is a lightweight, unsupervised framework for detecting industrial defects using RGB images and 3D data. It learns cross-modal feature mappings and uses dual-branch reconstruction to capture normal appearance and geometry patterns.
+
+Key Features
+
+Cross-modal mapping between 2D and 3D feature spaces.
+
+Dual-branch reconstruction for RGB and 3D features.
+
+Adaptive fusion emphasizes reliable signals and suppresses noisy regions.
+
+Low memory footprint and fast inference using frozen encoders and lightweight networks.
+
+Supports 3D-only operation when RGB images are unavailable.
+
+Performance
+
+State-of-the-art anomaly detection and localization on MVTec 3D–AD.
+
+Efficient in memory and speed compared to existing multimodal methods.
+
+Works in both standard and few-shot settings.
 
 ## Datasets
 
