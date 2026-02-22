@@ -68,7 +68,7 @@ Training options
 
 `--dataset_path` : Path to the root directory of the MVTec 3D-AD dataset.
 
-`--checkpoint_savepath` : Directory where trained checkpoints will be saved (default: ./checkpoints/CMDR_IAD_checkpoints).
+`--checkpoint_savepath` : Directory where trained checkpoints will be saved (default: `./checkpoints/CMDR_IAD_checkpoints`).
 
 `--class_name` : Object category to train on.
 
@@ -79,11 +79,7 @@ Training options
 Each object category is trained independently, and the resulting checkpoints are stored per class.
 
 ## Contacts
-...
-
-
-
----
+For questions, please send an email to <radia.daci@isasi.cnr.it>. .
 
 ## 📂 Repository Structure
 
