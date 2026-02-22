@@ -250,7 +250,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset_path",
         type=str,
-        default="/home/radia123_/decomap/processing/mvtec_3d_anomaly_detection",
+        default="path/processing/mvtec_3d_anomaly_detection",
         help="Dataset path."
     )
 
