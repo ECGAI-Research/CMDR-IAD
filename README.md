@@ -21,11 +21,6 @@ Key Features:
 - Dual-branch reconstruction: learns modality-specific normal patterns for RGB and 3D data.
 
 - Adaptive fusion: combines reconstruction errors and cross-modal discrepancies with spatial reliability weighting, producing accurate and stable anomaly maps.
-
-- Lightweight design using frozen encoders and small mapping/decoding networks for fast inference and low memory usage.
-
-- 3D-only mode: the 3D reconstruction branch works independently if only point clouds are available.
-
 <image src="Architectures/CMDR-IAD_Architecture.jpg">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
