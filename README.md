@@ -10,7 +10,7 @@ The method is lightweight, does not rely on memory banks or teacher–student ar
 ## 📌 Overview
 
 Multimodal industrial anomaly detection benefits from combining complementary RGB and 3D information. However, existing unsupervised approaches often depend on memory banks, teacher–student schemes, or fragile fusion strategies, which can degrade performance under noisy depth, weak texture, or missing modalities.
-<image src="Architectures/CMDR-IAD_Architecture.jpg">
+
 
 ---
 
@@ -36,9 +36,7 @@ Key Features:
 
 - 3D-only mode: the 3D reconstruction branch works independently if only point clouds are available.
 
-<p align="center">
-  <img src="images/architecture.png" width="800">
-</p>
+<image src="Architectures/CMDR-IAD_Architecture.jpg">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
 
