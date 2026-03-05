@@ -7,13 +7,6 @@ The method is lightweight, does not rely on memory banks or teacher–student ar
 
 ---
 
-## 📌 Overview
-
-Multimodal industrial anomaly detection benefits from combining complementary RGB and 3D information. However, existing unsupervised approaches often depend on memory banks, teacher–student schemes, or fragile fusion strategies, which can degrade performance under noisy depth, weak texture, or missing modalities.
-
-
----
-
 ## 📑 Table of Contents
 - [Introduction](#introduction)
 - [Datasets](#datasets)
