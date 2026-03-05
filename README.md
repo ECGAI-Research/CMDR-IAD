@@ -10,11 +10,7 @@ The method is lightweight, does not rely on memory banks or teacher–student ar
 ## 📌 Overview
 
 Multimodal industrial anomaly detection benefits from combining complementary RGB and 3D information. However, existing unsupervised approaches often depend on memory banks, teacher–student schemes, or fragile fusion strategies, which can degrade performance under noisy depth, weak texture, or missing modalities.
-
-**CMDR-IAD** addresses these challenges through:
-- **Bidirectional 2D↔3D cross-modal mapping** to model appearance–geometry consistency
-- **Dual-branch reconstruction** to independently capture normal appearance and geometric patterns
-- **A reliability- and confidence-aware fusion strategy** for robust and precise anomaly localization
+<image src="Architectures/CMDR-IAD_Architecture.png">
 
 ---
 
