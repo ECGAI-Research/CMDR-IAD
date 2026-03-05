@@ -60,7 +60,7 @@ The raw dataset requires preprocessing to obtain aligned RGB images and organize
 We release the pretrained CMDR-IAD checkpoints used to obtain the results reported in the paper.
 The weights are provided per object category and can be directly used for inference.
 
-- Download: **[CMDR-IAD checkpoints](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad)**
+- The pretrained CMDR-IAD checkpoints used to obtain the results reported in the paper will be released after the paper is accepted.
 - Create a folder named `checkpoints` in the project directory;
 - Copy the downloaded weights into the `checkpoints`.
 
