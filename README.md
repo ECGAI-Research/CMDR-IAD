@@ -44,24 +44,25 @@ The weights are provided per object category and can be directly used for infere
 - Copy the downloaded weights into the `checkpoints`.
 
 ## Code
-To train CMDR-IAD, use the train.py script.
-The training procedure independently optimizes the cross-modal mapping networks and the dual-branch reconstruction modules for a given object category, following the protocol described in the paper.
-Training command
-python train.py --class_name tire
+CMDR-IAD provides scripts for **training** and **inference** of cross-modal mapping and dual-branch reconstruction networks for industrial anomaly detection.
 
-Training options
+To train CMDR-IAD, use the train.py script.
+To Test CMDR-IAD. use the inference.py script.
+
+
+Train and test options
 
 `--dataset_path` : Path to the root directory of the MVTec 3D-AD dataset.
 
-`--checkpoint_savepath` : Directory where trained checkpoints will be saved (default: `./checkpoints/CMDR_IAD_checkpoints`).
+`--checkpoint_savepath` : Directory where trained checkpoints are saved (training) or read from (inference) (default: `./checkpoints/CMDR_IAD_checkpoints`).
 
-`--class_name` : Object category to train on.
+`--class_name` : Object category to train on or to test on .
 
-`--epochs_no` : Number of training epochs.
+`--epochs_no` : Number of epochs.
 
 `--batch_size` : Batch size.
 
-Each object category is trained independently, and the resulting checkpoints are stored per class.
+Each object category is trained independently, and the resulting checkpoints are stored per class for inference.
 
 ## Contacts
 For questions, please send an email to <radia.daci@isasi.cnr.it>. .
