@@ -1,7 +1,7 @@
 # CMDR-IAD: Cross-Modal Mapping and Dual-Branch Reconstruction for 2D–3D Industrial Anomaly Detection
 
+This repository provides the official PyTorch implementation of **CMDR-IAD**, an unsupervised framework for industrial anomaly detection that integrates RGB appearance and 3D surface geometry.
 
-This repository provides the official PyTorch implementation of **CMDR-IAD**, an unsupervised framework for industrial anomaly detection that integrates RGB appearance and 3D surface geometry.  
 ---
 
 ## 📑 Table of Contents
@@ -13,7 +13,7 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, an
 
 ## Introduction
 CMDR-IAD is an unsupervised, modality-flexible framework for industrial anomaly detection. It models cross-modal relationships between RGB and 3D features and learns dual-branch reconstructions of normal appearance and geometry.
-
+ 
 Key Features:
 
 - Cross-modal mapping: projects 2D features into 3D space and vice versa.
