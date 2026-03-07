@@ -6,6 +6,7 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, an
 
 ## 📑 Table of Contents
 - [Introduction](#introduction)
+- [Cite this work](#Cite this work)
 - [Datasets](#datasets)
 - [Checkpoints](#checkpoints)
 - [Code](#code)
@@ -24,8 +25,21 @@ Key Features:
 <image src="Architectures/CMDR-IAD_Architecture.jpg">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
+## Cite this work
 
+🖋️ If you find this code useful in your research, please cite:
 
+```bibtex
+@misc{daci2026crossmodalmappingdualbranchreconstruction,
+      title={Cross-Modal Mapping and Dual-Branch Reconstruction for 2D-3D Multimodal Industrial Anomaly Detection}, 
+      author={Radia Daci and Vito Renò and Cosimo Patruno and Angelo Cardellicchio and Abdelmalik Taleb-Ahmed and Marco Leo and Cosimo Distante},
+      year={2026},
+      eprint={2603.03939},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.03939}, 
+}
+```
 ## Datasets
 
 We evaluate CMDR-IAD on the **[MVTec 3D-AD](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad)** dataset, which provides paired RGB images and 3D point clouds for industrial anomaly detection.
