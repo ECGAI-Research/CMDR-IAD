@@ -13,15 +13,10 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, an
 - [Contacts](#contacts)
 
 ## Introduction
-CMDR-IAD is an unsupervised, modality-flexible framework for industrial anomaly detection. It models cross-modal relationships between RGB and 3D features and learns dual-branch reconstructions of normal appearance and geometry.
- 
-Key Features:
-
-- Cross-modal mapping: projects 2D features into 3D space and vice versa.
-
-- Dual-branch reconstruction: learns modality-specific normal patterns for RGB and 3D data.
-
-- Adaptive fusion: combines reconstruction errors and cross-modal discrepancies with spatial reliability weighting, producing accurate and stable anomaly maps.
+Multimodal industrial anomaly detection benefits from integrating RGB appearance with 3D surface geometry, yet existing unsupervised approaches commonly rely on memory banks, teacher–student architectures, or fragile fusion schemes, limiting robustness under noisy depth, weak texture, or missing modalities. This paper introduces CMDR–IAD, a lightweight and modality-flexible unsupervised framework for reliable anomaly detection in 2D+3D multimodal as well as single-modality (2D-only or 3D-only) settings. CMDR–IAD combines bidirectional 2D↔3D cross-modal mapping to model appearance–geometry consistency with dual-branch reconstruction that independently captures normal texture and geometric structure. A two-part fusion strategy integrates these cues:
+a reliability-gated mapping anomaly highlights spatially consistent texture geometry discrepancies, while a confidence-weighted reconstruction anomaly adaptively balances appearance and geometric deviations, yielding stable and precise anomaly localization even in depth-sparse or low-texture regions.On the MVTec 3D-AD benchmark, CMDR–IAD achieves state-of-the-art perfor-
+mance while operating without memory banks, reaching 97.3% image-level AUROC (I-AUROC), 99.6% pixel-level AUROC (P-AUROC), and 97.6% AUPRO.On a real-world polyurethane cutting dataset, the 3D-only variant attains 92.6%
+I-AUROC and 92.5% P-AUROC, demonstrating strong effectiveness under practical industrial conditions. These results highlight the framework’s robustness, modality flexibility, and the effectiveness of the proposed fusion strategies for industrial visual inspection
 <image src="Architectures/CMDR-IAD_Architecture.jpg">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
