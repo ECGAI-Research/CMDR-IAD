@@ -6,7 +6,7 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, an
 
 ## 📑 Table of Contents
 - [Introduction](#introduction)
-- [Cite this work](#Cite this work)
+- [Cite this work](#cite-this-work)
 - [Datasets](#datasets)
 - [Checkpoints](#checkpoints)
 - [Code](#code)
@@ -25,8 +25,8 @@ Key Features:
 <image src="Architectures/CMDR-IAD_Architecture.jpg">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
-## Cite this work
 
+## Cite this work
 🖋️ If you find this code useful in your research, please cite:
 
 ```bibtex
