@@ -3,7 +3,6 @@ import torch.nn as nn
 import timm
 from timm.models.layers import DropPath
 import sys
-sys.path.append('/data/radiadassi/05032025_Downloads/crossmodal-feature-mapping-main/utils')
 from utils import pointnet2_utils
 
 class FeatureExtractors(torch.nn.Module):
