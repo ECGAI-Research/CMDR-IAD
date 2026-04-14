@@ -130,7 +130,7 @@ mkdir checkpoints
 ```
 ./checkpoints/polyurethane_cuts
 ```
-## Code
+## 💻 Code
 CMDR-IAD provides scripts for **training** and **inference** of cross-modal mapping and dual-branch reconstruction networks for industrial anomaly detection.
 
 To train CMDR-IAD, use the train.py script.
@@ -147,5 +147,5 @@ Train and test options
 `--batch_size` : Batch size.
 
 
-## Contacts
+## 📧 Contacts
 For questions, please send an email to <radia.daci@isasi.cnr.it>.
