@@ -73,7 +73,7 @@ def chunk_sequential(points, abn_mask, sample_size):
 # ------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--root", type=str, default="/home/radia123_/decomap/poly/ACQUISIZIONI/")
+    parser.add_argument("--root", type=str, default="path to dataset")
     parser.add_argument("--sampling", type=str, required=True,
                         choices=["sequential"])
     parser.add_argument("--detector", type=str,
