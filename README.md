@@ -12,14 +12,14 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, an
 - [Code](#code)
 - [Contacts](#contacts)
 
-## Introduction
+## 📊 Introduction
 Multimodal industrial anomaly detection remains challenging under noisy or incomplete modalities, where existing approaches based on memory banks, teacher--student frameworks, or naive fusion struggle to effectively exploit complementary information across 2D and 3D data. To address these limitations, this paper presents CMDR--IAD, a unified and novel framework for unsupervised multimodal anomaly detection that advances multi-view representation learning by jointly modeling heterogeneous 2D--3D data through bidirectional cross-modal alignment and dual-branch reconstruction. We propose two key components: (i) a reliability-gated mapping anomaly that captures cross-view discrepancies, and (ii) a confidence-weighted reconstruction anomaly that models intra-modal deviations. These signals are computed from independently optimized cross-modal mapping and reconstruction modules, and are adaptively fused to produce accurate anomaly localization under incomplete, noisy, or partially aligned multimodal inputs. CMDR--IAD achieves 97.3% image-level AUROC, 99.6% pixel-level AUROC, and 97.6% AUPRO on the MVTec 3D-AD benchmark. On a real-world polyurethane dataset, the 3D-only variant attains 92.6% I-AUROC and 92.5% P-AUROC, demonstrating robustness and flexibility across multimodal and unimodal settings. These results highlight the effectiveness of CMDR--IAD for multimodal representation learning and industrial anomaly detection.
 <image src="Architectures/CMDR-IAD.png">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
 
-## Cite this work
-🖋️ If you find this code useful in your research, please cite:
+## 🖋️ Cite this work
+If you find this code useful in your research, please cite:
 
 ```bibtex
 @misc{daci2026crossmodalmappingdualbranchreconstruction,
@@ -32,7 +32,7 @@ Multimodal industrial anomaly detection remains challenging under noisy or incom
       url={https://arxiv.org/abs/2603.03939}, 
 }
 ```
-## Datasets
+## 📂 Datasets
 
 We evaluate CMDR-IAD on the **[MVTec 3D-AD](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad)** dataset, which provides paired RGB images and 3D point clouds for industrial anomaly detection.
 
@@ -49,7 +49,7 @@ The weights are provided per object category and can be directly used for infere
 - Create a folder named `checkpoints` in the project directory;
 - Copy the downloaded weights into the `checkpoints`.
 
-## Code
+## 💻 Code
 CMDR-IAD provides scripts for **training** and **inference** of cross-modal mapping and dual-branch reconstruction networks for industrial anomaly detection.
 
 To train CMDR-IAD, use the train.py script.
@@ -70,7 +70,7 @@ Train and test options
 
 Each object category is trained independently, and the resulting checkpoints are stored per class for inference.
 
-## Contacts
+## 📧 Contacts
 For questions, please send an email to <radia.daci@isasi.cnr.it>. .
 
 ## 📂 Repository Structure
