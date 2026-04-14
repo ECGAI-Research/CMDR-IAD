@@ -5,11 +5,11 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, us
 ---
 
 ## 📑 Table of Contents
-- [Dataset and Preprocessing](#Dataset)
-- [Usage in CMDR-IAD](#Usage)
-- [Checkpoints](#checkpoints)
-- [Code](#code)
-- [Contacts](#contacts)
+- [Dataset and Preprocessing](#dataset-and-preprocessing)
+- [Usage in CMDR-IAD](#usage-in-cmdr-iad)
+- [Checkpoints](#-checkpoints)
+- [Code](#-code)
+- [Contacts](#-contacts)
 ## 📂 Dataset and Preprocessing
 
 ### Polyurethane 3D Dataset
