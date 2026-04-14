@@ -27,7 +27,7 @@ def set_seeds(seed=115):
 # ==============================
 # Training Function
 # ==============================
-def train_featrec3d(args, save_model=True):
+def Train_CMDR_IAD(args, save_model=True):
     set_seeds()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
@@ -133,5 +133,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    train_featrec3d(args, save_model=True)
+    Train_CMDR_IAD(args, save_model=True)
 
