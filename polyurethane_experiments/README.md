@@ -92,6 +92,10 @@ Final dataset:
 Normalization:
 Each chunk is independently scaled to the range [-1, 1].
 
+
+The polyurethane dataset can be downloaded from Google Drive:
+
+👉 [Download Dataset](https://drive.google.com/your-link-here)
 ---
 
 ## 📊 Usage in CMDR-IAD
@@ -118,6 +122,7 @@ mkdir checkpoints
 2. Place the downloaded weights inside:
 
 ```
+
 ./checkpoints/polyurethane_cuts
 ```
 ## 💻 Code
