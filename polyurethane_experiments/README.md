@@ -130,16 +130,6 @@ mkdir checkpoints
 ```
 ./checkpoints/polyurethane_cuts
 ```
-
-## 📦 checkpoints
-
-We release the pretrained CMDR-IAD checkpoints used to obtain the results reported in the paper.
-The weight is provided to can be directly used for inference.
-
-- The pretrained CMDR-IAD checkpoints used to obtain the results reported in the paper will be released after the paper is accepted.
-- Create a folder named `checkpoints` in the project directory;
-- Copy the downloaded weights into the `checkpoints`.
-
 ## Code
 CMDR-IAD provides scripts for **training** and **inference** of cross-modal mapping and dual-branch reconstruction networks for industrial anomaly detection.
 
