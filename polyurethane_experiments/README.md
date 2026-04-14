@@ -102,6 +102,34 @@ This dataset is used to:
 * evaluate purely geometric anomaly detection
 * benchmark performance in real industrial conditions
 
+## 📦 Checkpoints
+
+We provide pretrained checkpoints for CMDR-IAD trained on the polyurethane 3D dataset.
+
+These weights can be directly used for inference or as initialization for further training.
+
+---
+
+### 📥 Download
+
+* The pretrained checkpoints will be released after the paper is accepted.
+* Stay tuned for updates or contact the authors for early access.
+
+---
+
+### 📁 Setup
+
+1. Create a folder named `checkpoints` in the project root:
+
+```
+mkdir checkpoints
+```
+
+2. Place the downloaded weights inside:
+
+```
+./checkpoints/polyurethane_cuts
+```
 
 ## 📦 checkpoints
 
