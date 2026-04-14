@@ -6,7 +6,7 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, us
 
 ## 📑 Table of Contents
 - [Dataset and Preprocessing](#Dataset)
-- [Dataset Download](#Download)
+- [Usage in CMDR-IAD](#Usage)
 - [Checkpoints](#checkpoints)
 - [Code](#code)
 - [Contacts](#contacts)
@@ -107,17 +107,7 @@ This dataset is used to:
 We provide pretrained checkpoints for CMDR-IAD trained on the polyurethane 3D dataset.
 
 These weights can be directly used for inference or as initialization for further training.
-
----
-
-### 📥 Download
-
-* The pretrained checkpoints will be released after the paper is accepted.
-* Stay tuned for updates or contact the authors for early access.
-
----
-
-### 📁 Setup
+The pretrained checkpoints will be released after the paper is accepted.
 
 1. Create a folder named `checkpoints` in the project root:
 
