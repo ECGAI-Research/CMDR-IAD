@@ -19,7 +19,7 @@ def set_seeds(seed=42):
 
 
 # -------------------- Testing Function --------------------
-def test_featrec3d(args):
+def Test_CMDR_IAD(args):
     set_seeds()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -126,5 +126,5 @@ if __name__ == "__main__":
     parser.add_argument('--result_path', type=str, default='./results_9216_iso_low')
     args = parser.parse_args()
 
-    test_featrec3d(args)
+    Test_CMDR_IAD(args)
 
