@@ -93,9 +93,7 @@ Normalization:
 Each chunk is independently scaled to the range [-1, 1].
 
 
-The polyurethane dataset can be downloaded from Google Drive:
-
-👉 [Download Dataset](https://drive.google.com/your-link-here)
+The polyurethane dataset can be downloaded from Google Drive: [Download Dataset]([https://drive.google.com/your-link-here](https://drive.google.com/drive/folders/1RonF7868qfpYeKbQ2M0axuMxpRa6f7Vz?usp=sharing))
 ---
 
 ## 📊 Usage in CMDR-IAD
