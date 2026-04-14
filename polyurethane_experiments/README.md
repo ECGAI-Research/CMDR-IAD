@@ -10,16 +10,97 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, us
 - [Checkpoints](#checkpoints)
 - [Code](#code)
 - [Contacts](#contacts)
+## 📂 Dataset and Preprocessing
 
-## Dataset
-The polyurethane cutting dataset was collected within the MOROSAI project using a dual-sensor profilometer equipped with a 405\,nm laser. The system captures dense 3D point clouds focused on the cutting edges of large polyurethane components. As only geometric data is available, this dataset provides a realistic benchmark for evaluating the 3D-only inference mode of CMDR--IAD.
+### Polyurethane 3D Dataset
 
-## Download
+The polyurethane cutting dataset was collected within the MOROSAI project using a dual-sensor profilometer equipped with a 405 nm laser. The system captures dense 3D point clouds focused on the cutting edges of large polyurethane components.
 
-We evaluate CMDR-IAD on the **[MVTec 3D-AD](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad)** dataset, which provides paired RGB images and 3D point clouds for industrial anomaly detection.
+Since only geometric data is available (no RGB images), this dataset is used to evaluate the 3D-only inference mode of CMDR-IAD under realistic industrial conditions.
 
-The raw dataset requires preprocessing to obtain aligned RGB images and organized point clouds. The necessary preprocessing scripts are provided in the `processing` directory.
+---
 
+## ⚙️ Preprocessing Pipeline
+
+The raw point clouds are processed using a three-stage pipeline:
+
+### 1. Geometric Outlier Detection (Isolation Forest)
+
+Given a point cloud:
+
+P = {p_i in R^3}, i = 1,...,N
+
+We apply an Isolation Forest to detect sparse geometric anomalies caused by:
+
+* cutting defects
+* sensor noise
+
+Settings:
+
+* contamination = 0.0001 (very low due to defect sparsity)
+
+Output:
+
+* binary point-level anomaly mask for each scan
+
+---
+
+### 2. Sequential Chunking and Labeling
+
+Each point cloud is split into fixed-size chunks:
+
+* 9216 points per chunk
+
+For each chunk C_k, we compute the anomaly ratio:
+
+f_k = (1 / |C_k|) * sum(m_i)
+
+Where:
+
+* m_i is the anomaly label from Isolation Forest
+
+Chunk labeling rule:
+
+* anomalous if f_k >= 0.0025
+* otherwise normal
+
+Stored data:
+
+* chunked point clouds
+* chunk-level labels
+* point-wise anomaly masks
+
+---
+
+### 3. Dataset Construction and Normalization
+
+All chunks are aggregated into a unified dataset.
+
+Protocol:
+
+* one-class training (only normal samples used for training)
+* 90/10 split on normal data
+
+Final dataset:
+
+* Training: 1856 normal samples
+* Test: 235 samples
+
+  * 207 normal
+  * 28 anomalous
+
+Normalization:
+Each chunk is independently scaled to the range [-1, 1].
+
+---
+
+## 📊 Usage in CMDR-IAD
+
+This dataset is used to:
+
+* train the 3D reconstruction branch
+* evaluate purely geometric anomaly detection
+* benchmark performance in real industrial conditions
 
 
 ## 📦 checkpoints
