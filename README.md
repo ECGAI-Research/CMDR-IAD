@@ -17,7 +17,7 @@ Multimodal industrial anomaly detection benefits from integrating RGB appearance
 a reliability-gated mapping anomaly highlights spatially consistent texture geometry discrepancies, while a confidence-weighted reconstruction anomaly adaptively balances appearance and geometric deviations, yielding stable and precise anomaly localization even in depth-sparse or low-texture regions.On the MVTec 3D-AD benchmark, CMDR–IAD achieves state-of-the-art perfor-
 mance while operating without memory banks, reaching 97.3% image-level AUROC (I-AUROC), 99.6% pixel-level AUROC (P-AUROC), and 97.6% AUPRO.On a real-world polyurethane cutting dataset, the 3D-only variant attains 92.6%
 I-AUROC and 92.5% P-AUROC, demonstrating strong effectiveness under practical industrial conditions. These results highlight the framework’s robustness, modality flexibility, and the effectiveness of the proposed fusion strategies for industrial visual inspection
-<image src="Architectures/CMDR-IAD_Architecture.jpg">
+<image src="Architectures/CMDR-IAD.png">
 
 **Figure:** Overview of the CMDR-IAD architecture. The framework learns cross-modal mappings between RGB and 3D features and uses dual-branch reconstruction with adaptive fusion for anomaly detection.
 
