@@ -6,7 +6,7 @@ This repository provides the official PyTorch implementation of **CMDR-IAD**, an
 
 ## 📑 Table of Contents
 - [Introduction](#-introduction)
-- [Cite this work](#-cite-this-work)
+- [Cite this work](#cite-this-work)
 - [Datasets](#-datasets)
 - [Checkpoints](#-checkpoints)
 - [Code](#-code)
